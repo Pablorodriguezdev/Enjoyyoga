@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enjoyyoga</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Animación de carga -->
+  <div id="loader">
+    <div class="yoga-icon"></div>
+  </div>
+
+  <!-- Banner principal (hero) -->
+  <header class="hero">
+    <!-- Logo arriba -->
+    <div class="hero-logo">Enjoyyoga.es</div>
+
+    <!-- Contenido central -->
+    <div class="hero-content">       
+      <h1>Clases de yoga</h1>
+      <h2>-Hatha Yoga-</h2>
+
+      <!-- Redes sociales -->
+      <div class="social-icons">
+        <a href="https://facebook.com/tuempresa" target="_blank" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28">
+            <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.244 0-1.638.773-1.638 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.128 22 16.991 22 12z"/>
+          </svg>
+        </a>
+        <a href="https://x.com/tuempresa" target="_blank" aria-label="X (Twitter)">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+        <a href="https://instagram.com/tuempresa" target="_blank" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+        <a href="https://youtube.com/@tuempresa" target="_blank" aria-label="YouTube">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28">
+            <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Barra de navegación (ahora debajo del banner) -->
+  <nav class="main-nav">
+    <div class="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="pages/servicios.html">Servicios</a>
+      <a href="pages/contacto.html">Contacto</a>
+      <a href="pages/conocenos.html">Conócenos</a>
+      <a href="pages/blog.html">Blog</a>
+      <a href="pages/colaboradores.html">Colaboradores</a>
+    </div>
+  </nav>
+
+<!-- Carrusel interactivo (3 imágenes visibles) -->
+<div class="carousel-container">
+  <div class="carousel-wrapper">
+    <div class="carousel-track" id="carouselTrack">
+      <!-- Clonamos la última imagen al principio para el bucle -->
+      <div class="carousel-card">
+        <div class="carousel-image" style="background-image: url('img/carrusel9.webp');"></div>
+      </div>
+      <div class="carousel-card">
+        <div class="carousel-image" style="background-image: url('img/carrusel1.webp');"></div>
+      </div>
+      <div class="carousel-card">
+        <div class="carousel-image" style="background-image: url('img/carrusel2.webp');"></div>
+      </div>
+      <div class="carousel-card">
+        <div class="carousel-image" style="background-image: url('img/carrusel3.webp');"></div>
+      </div>
+      <div class="carousel-card">
+        <div class="carousel-image" style="background-image: url('img/carrusel4.webp');"></div>
+      </div>
+      <div class="carousel-card">
+        <div class="carousel-image" style="background-image: url('img/carrusel5.webp');"></div>
+      </div>
+      <div class="carousel-card">
+        <div class="carousel-image" style="background-image: url('img/carrusel6.webp');"></div>
+      </div>
+      <div class="carousel-card">
+        <div class="carousel-image" style="background-image: url('img/carrusel7.webp');"></div>
+      </div>
+      <div class="carousel-card">
+        <div class="carousel-image" style="background-image: url('img/carrusel8.webp');"></div>
+      </div>
+      <div class="carousel-card">
+        <div class="carousel-image" style="background-image: url('img/carrusel9.webp');"></div>
+      </div>
+      <!-- Clonamos la primera imagen al final para el bucle -->
+      <div class="carousel-card">
+        <div class="carousel-image" style="background-image: url('img/carrusel1.webp');"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botones de navegación -->
+  <button class="carousel-btn prev" id="prevBtn">‹</button>
+  <button class="carousel-btn next" id="nextBtn">›</button>
+
+  <!-- Indicadores (opcional, se puede ocultar o adaptar) -->
+  <div class="carousel-indicators" id="indicators">
+    <!-- Se generarán dinámicamente -->
+  </div>
+</div>
+
+
+
+<!-- Tarjetas normales debajo -->
+<section class="cards">
+  <!-- Tarjeta 1 (ejemplo) -->
+  <div class="card">
+    <img src="img/carrusel1.webp" alt="Clase de yoga">
+    <div class="card-content">
+      <h3>Clase Matutina</h3>
+      <p>Empieza tu día con equilibrio y energía positiva.</p>
+      <a href="#" class="btn">Ver más</a>
+    </div>
+  </div>  
+  <!-- Tarjeta 2 (ejemplo) -->
+  <div class="card">
+    <img src="img/carrusel2.webp" alt="Clase de yoga">
+    <div class="card-content">
+      <h3>Clase Matutina</h3>
+      <p>Empieza tu día con equilibrio y energía positiva.</p>
+      <a href="#" class="btn">Ver más</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="img/carrusel3.webp" alt="Clase de yoga">
+    <div class="card-content">
+      <h3>Clase Matutina</h3>
+      <p>Empieza tu día con equilibrio y energía positiva.</p>
+      <a href="#" class="btn">Ver más</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="img/carrusel4.webp" alt="Clase de yoga">
+    <div class="card-content">
+      <h3>Clase Matutina</h3>
+      <p>Empieza tu día con equilibrio y energía positiva.</p>
+      <a href="#" class="btn">Ver más</a>
+    </div>
+  </div>
+</section>
+<!-- Tarjetas normales debajo -->
+<section class="cards">
+  <!-- Tarjeta 1 (ejemplo) -->
+  <div class="card">
+    <img src="img/tarjeta1.jpg" alt="Clase de yoga">
+    <div class="card-content">
+      <h3>Clase Matutina</h3>
+      <p>Empieza tu día con equilibrio y energía positiva.</p>
+      <a href="#" class="btn">Ver más</a>
+    </div>
+  </div>  
+  <!-- Tarjeta 2 (ejemplo) -->
+  <div class="card">
+    <img src="img/tarjeta1.jpg" alt="Clase de yoga">
+    <div class="card-content">
+      <h3>Clase Matutina</h3>
+      <p>Empieza tu día con equilibrio y energía positiva.</p>
+      <a href="#" class="btn">Ver más</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="img/tarjeta1.jpg" alt="Clase de yoga">
+    <div class="card-content">
+      <h3>Clase Matutina</h3>
+      <p>Empieza tu día con equilibrio y energía positiva.</p>
+      <a href="#" class="btn">Ver más</a>
+    </div>
+  </div>
+  <div class="card">
+    <img src="img/tarjeta1.jpg" alt="Clase de yoga">
+    <div class="card-content">
+      <h3>Clase Matutina</h3>
+      <p>Empieza tu día con equilibrio y energía positiva.</p>
+      <a href="#" class="btn">Ver más</a>
+    </div>
+  </div>
+</section>
+
+<section class="form-section" id="contacto">
+    <div class="form-container">
+      <h2>Únete a Nuestras Clases</h2>
+      <form id="yogaForm">
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="tipo">Tipo de clase</label>
+          <select id="tipo" name="tipo" required>
+            <option value="">Selecciona...</option>
+            <option value="online">Clases online</option>
+            <option value="empresas">Yoga para empresas</option>
+            <option value="eventos">Eventos de yoga</option>
+          </select>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="privacidad" name="privacidad" required>
+          <label for="privacidad">Acepto la <a href="#" style="color:#e95e4a;">política de privacidad</a></label>
+        </div>
+        <button type="submit" class="submit-btn">Enviar solicitud</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Hatha Yoga. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
