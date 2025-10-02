@@ -4,41 +4,42 @@
   box-sizing: border-box;
 }
 
-/* Fuentes modernas y elegantes */
+/* Fuentes refinadas y armoniosas */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Fuente principal para el cuerpo del texto */
   overflow-x: hidden;
-  color: #333;
+  color: #4a5568;
+  background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
 }
 
-h1, h2, h3, h4, .hero-logo {
-  font-family: 'Playfair Display', serif;
-}
+/* === Importar la fuente Sacramento desde Google Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 
-/* === Animación de carga === */
+/* === Animación de carga refinada === */
 #loader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #fdf9f5;
+  background: linear-gradient(135deg, #f0fff4, #e6fffa);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.6s ease-out;
+  transition: opacity 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 .yoga-icon {
-  width: 120px;
-  height: 120px;
-  border: 4px solid #ff6b6b;
+  width: 140px;
+  height: 140px;
+  border: 3px solid #48bb78;
   border-radius: 50%;
   position: relative;
-  animation: pulse 2.2s infinite;
+  animation: pulse 2.5s infinite cubic-bezier(0.4, 0, 0.6, 1);
+  box-shadow: 0 10px 30px rgba(72, 187, 120, 0.2);
 }
 
 .yoga-icon::before {
@@ -47,180 +48,243 @@ h1, h2, h3, h4, .hero-logo {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   background: url('./img/cropped-logo-correo-enjoy-v2.webp') no-repeat center;
   background-size: contain;
+  filter: drop-shadow(0 0 10px rgba(72, 187, 120, 0.3));
 }
 
 @keyframes pulse {
-  0% { transform: scale(0.8); opacity: 0.6; }
-  50% { transform: scale(1.1); opacity: 1; }
-  100% { transform: scale(0.8); opacity: 0.6; }
+  0% { transform: scale(0.9); opacity: 0.7; box-shadow: 0 0 0 0 rgba(72, 187, 120, 0.4); }
+  50% { transform: scale(1.05); opacity: 1; box-shadow: 0 0 0 15px rgba(72, 187, 120, 0); }
+  100% { transform: scale(0.9); opacity: 0.7; box-shadow: 0 0 0 0 rgba(72, 187, 120, 0); }
 }
 
-/* === HERO === */
+/* === HERO - Degradado suave y textura === */
 .hero {
-  height: 90vh;
-  background: url('img/img_7210.jpg.webp') center/cover no-repeat;
+  height: 92vh;
+  background: 
+    linear-gradient(135deg, rgba(72, 187, 120, 0.1) 0%, rgba(16, 185, 129, 0.05) 100%),
+    url('img/img_7210.jpg.webp') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
+  color: #2d3748;
   position: relative;
   padding-top: 2rem;
+  overflow: hidden;
 }
 
-.hero::after {
+.hero::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(72, 187, 120, 0.05) 0%, transparent 50%);
 }
 
+/* === Aplicamos Sacramento solo aquí === */
 .hero-logo {
   position: absolute;
   top: 2rem;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  font-size: 5.2rem;
+  font-weight: 400; /* Peso normal para Sacramento */
+  letter-spacing: 1.5px; /* Añadido espaciado */
+  /* Mantenemos el degradado */
+  background: linear-gradient(45deg, #48bb78, #000508);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 10px rgba(255, 255, 255, 0.8);
+  /* Aplicamos la fuente personalizada */
+  font-family: 'Sacramento', cursive; /* Aplicamos Sacramento */
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 800px;
-  padding: 0 1.5rem;
+  padding: 0 2rem;
 }
 
+/* === Aplicamos Sacramento solo aquí === */
 .hero h1 {
-  font-size: 4.5rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  letter-spacing: -1px;
-  text-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  font-size: 9.8rem;
+  margin-bottom: 0.8rem;
+  /* Mantenemos el degradado */
+  background: linear-gradient(45deg, #030303, #0a0a0a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 20px rgba(255, 255, 255, 0.8);
+  /* Aplicamos la fuente personalizada */
+  font-family: 'Sacramento', cursive; /* Aplicamos Sacramento */
 }
 
+/* === Aplicamos Sacramento solo aquí (si se desea) === */
 .hero h2 {
-  font-size: 2rem;
-  font-weight: 300;
-  margin-bottom: 2rem;
-  opacity: 0.95;
-  letter-spacing: 2px;
+  font-size: 2.2rem;
+  font-weight: 400; /* Mantenemos el peso original */
+  margin-bottom: 2.5rem;
+  color: #4a5568; /* Mantenemos el color original */
+  letter-spacing: 1.5px; /* Mantenemos espaciado */
+  opacity: 0.9;
+  /* Aplicamos la fuente personalizada */
+  font-family: 'Sacramento', cursive; /* Aplicamos Sacramento */
 }
 
-/* Redes sociales */
+/* Redes sociales con efectos de luz */
 .social-icons {
   display: flex;
-  gap: 1.3rem;
+  gap: 1.5rem;
   justify-content: center;
+}
+
+/* === Aplicamos Sacramento solo aquí === */
+.titulo-carrusel {
+  font-size: 3.2rem;
+  font-weight: 400; /* Peso normal para Sacramento */
+  letter-spacing: 1.5px; /* Añadido espaciado */
+
+  /* Aplicamos el degradado */
+  background: linear-gradient(45deg, #48bb78, #4299e1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  /* Añadimos estilos para el posicionamiento dentro del flujo normal */
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+
+  /* Aplicamos la fuente personalizada */
+  font-family: 'Sacramento', cursive; /* Aplicamos Sacramento */
 }
 
 .social-icons a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(6px);
-  transition: all 0.35s ease;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .social-icons a:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-4px) scale(1.05);
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-6px) scale(1.1);
+  box-shadow: 0 12px 30px rgba(72, 187, 120, 0.3);
+  border-color: rgba(72, 187, 120, 0.5);
 }
 
-/* === Navegación moderna === */
+/* === Navegación elegante === */
 .main-nav {
-  background: white;
-  padding: 1.3rem 5%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem 5%;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
   position: relative;
   z-index: 100;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .nav-links {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2.4rem;
+  gap: 2.8rem;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #444;
-  font-weight: 600;
-  font-size: 1.05rem;
+  color: #4a5568;
+  font-weight: 500;
+  font-size: 1.8rem;
   position: relative;
-  padding: 0.4rem 0;
-  transition: color 0.3s ease;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  /* Mantiene la fuente principal 'Inter' */
 }
 
 .nav-links a::after {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 50%;
   width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #ff6b6b, #ff8e8e);
-  transition: width 0.4s ease;
+  height: 3px;
+  background: linear-gradient(90deg, #48bb78, #4299e1);
+  transform: translateX(-50%);
+  border-radius: 3px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-links a:hover {
-  color: #ff6b6b;
+  color: #48bb78;
+  transform: translateY(-2px);
 }
 
 .nav-links a:hover::after {
-  width: 100%;
+  width: 80%;
+  left: 10%;
 }
 
-/* ... (todo el CSS anterior hasta .carousel-container) ... */
-
-/* === Carrusel con 3 imágenes visibles === */
+/* === Carrusel premium (ajustado para centrarse dentro de .content-card) === */
 .carousel-container {
   position: relative;
   width: 100%;
-  max-width: 1200px;
-  margin: 3rem auto;
-  padding: 0 2rem;
+  margin: 4rem auto;
+  padding: 0 3rem;
   overflow: hidden;
 }
 
 .carousel-wrapper {
   overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-  padding: 2rem 4rem; /* Espacio lateral para ver las imágenes parciales */
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+  padding: 3rem 5rem;
+  background: rgba(255, 255, 255, 0.05);
+  width: 100%;
 }
 
+/* El resto de los estilos del carrusel permanecen igual */
 .carousel-track {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  height: 520px;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  height: 580px;
+  gap: 20px;
 }
 
 .carousel-card {
-  min-width: calc(100% / 3); /* Cada tarjeta ocupa 1/3 del ancho */
+  min-width: calc(100% / 5);
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: white;
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
   position: relative;
-  margin: 0 10px; /* Espacio entre tarjetas */
+  transition: all 0.4s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.carousel-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
 .carousel-image {
@@ -229,134 +293,181 @@ h1, h2, h3, h4, .hero-logo {
   background-size: cover;
   background-position: center;
   position: relative;
+  transition: transform 0.6s ease;
 }
 
-/* Botones de navegación */
+.carousel-card:hover .carousel-image {
+  transform: scale(1.05);
+}
+
+/* Botones de navegación premium */
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.9);
   border: none;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  font-size: 1.8rem;
-  color: #e95e4a;
+  font-size: 1.6rem;
+  color: #48bb78;
   cursor: pointer;
   z-index: 10;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel-btn:hover {
-  background: white;
-  transform: translateY(-50%) scale(1.1);
+  background: #48bb78;
+  color: white;
+  transform: translateY(-50%) scale(1.1) rotate(5deg);
+  box-shadow: 0 12px 30px rgba(72, 187, 120, 0.4);
 }
 
+/* Ajuste para que los botones respeten los márgenes internos del wrapper */
 .carousel-btn.prev {
-  left: 1rem;
+  left: 2rem;
 }
 
 .carousel-btn.next {
-  right: 1rem;
+  right: 2rem;
 }
 
-/* Indicadores */
+/* Indicadores elegantes */
 .carousel-indicators {
   display: flex;
   justify-content: center;
-  gap: 0.8rem;
-  margin-top: 1.5rem;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .indicator {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  background: #ddd;
+  background: rgba(72, 187, 120, 0.3);
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
 }
 
 .indicator.active {
-  background: #e95e4a;
+  background: #48bb78;
+  transform: scale(1.2);
+  border-color: #4299e1;
+  box-shadow: 0 0 15px rgba(72, 187, 120, 0.4);
 }
 
-
-
-
-
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-320px * 9)); }
-}
-
-/* === Tarjetas === */
+/* === Tarjetas premium === */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 2.2rem;
-  padding: 4.5rem 5%;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  padding: 6rem 5%;
+  background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 100%);
 }
 
 .card {
   background: white;
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #48bb78, #4299e1);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+}
+
+.card:hover::before {
+  transform: scaleX(1);
 }
 
 .card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-15px) rotate(1deg);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
 }
 
 .card img {
   width: 100%;
-  height: 220px;
+  height: 250px;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
 }
 
 .card-content {
-  padding: 1.8rem 1.5rem;
+  padding: 2.5rem 2rem;
+  position: relative;
 }
 
+/* Mantiene la fuente principal para los títulos de las tarjetas */
 .card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.9rem;
-  color: #222;
-}
-
-.card p {
-  color: #666;
+  font-size: 1.6rem;
   margin-bottom: 1.2rem;
-  line-height: 1.6;
+  color: #2d3748;
+  font-weight: 600;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Fuente principal */
 }
 
+/* Mantiene la fuente principal para el texto de las tarjetas */
+.card p {
+  color: #718096;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Fuente principal */
+}
+
+/* Mantiene la fuente principal para los botones */
 .btn {
   display: inline-block;
-  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+  background: linear-gradient(135deg, #48bb78, #4299e1);
   color: white;
-  padding: 0.7rem 1.4rem;
-  border-radius: 30px;
+  padding: 0.9rem 1.8rem;
+  border-radius: 35px;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 8px 25px rgba(72, 187, 120, 0.3);
+  border: none;
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Fuente principal */
 }
 
 .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(255, 107, 107, 0.4);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(72, 187, 120, 0.4);
+  background: linear-gradient(135deg, #4299e1, #48bb78);
 }
 
-/* === Formulario === */
+/* === Formulario premium (ajustado para transparencia) === */
 .form-section {
-  background: url('./img/carrusel7.webp') center/cover;
-  padding: 5.5rem 5%;
+  background: 
+    linear-gradient(135deg, rgba(72, 187, 120, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%),
+    url('./img/carrusel4.webp') center/cover; 
+  padding: 7rem 5%;
   position: relative;
+  overflow: hidden;
 }
 
 .form-section::before {
@@ -366,130 +477,260 @@ h1, h2, h3, h4, .hero-logo {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.65);
+  background: 
+    radial-gradient(circle at 30% 70%, rgba(72, 187, 120, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 70% 30%, rgba(16, 185, 129, 0.08) 0%, transparent 40%);
 }
 
 .form-container {
-  max-width: 620px;
+  max-width: 680px;
   margin: 0 auto;
-  background: white;
-  padding: 2.8rem;
-  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 3.5rem;
+  border-radius: 25px;
   position: relative;
   z-index: 2;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+/* === Aplicamos Sacramento solo aquí === */
 .form-container h2 {
   text-align: center;
-  margin-bottom: 1.8rem;
-  color: #222;
-  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
+  font-size: 2.2rem;
+  font-weight: 400; /* Peso normal para Sacramento */
+  /* Aplicamos el degradado */
+  background: linear-gradient(45deg, #48bb78, #00090f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* Aplicamos la fuente personalizada */
+  font-family: 'Sacramento', cursive; /* Aplicamos Sacramento */
 }
 
+/* Mantiene la fuente principal para las etiquetas */
 .form-group {
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.8rem;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
   font-weight: 600;
-  color: #333;
+  color: #2d3748;
+  font-size: 1.1rem;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Fuente principal */
 }
 
+/* Mantiene la fuente principal para los inputs */
 .form-group input,
 .form-group select {
   width: 100%;
-  padding: 0.9rem;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  font-size: 1rem;
-  transition: border 0.3s, box-shadow 0.3s;
+  padding: 1.2rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 15px;
+  font-size: 1.1rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.7);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Fuente principal */
 }
 
 .form-group input:focus,
 .form-group select:focus {
   outline: none;
-  border-color: #ff6b6b;
-  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.15);
+  border-color: #48bb78;
+  box-shadow: 0 0 0 4px rgba(72, 187, 120, 0.2);
+  transform: translateY(-2px);
 }
 
+/* Mantiene la fuente principal para el grupo de checkbox */
 .checkbox-group {
   display: flex;
   align-items: flex-start;
-  gap: 0.9rem;
-  margin: 1.4rem 0;
+  gap: 1.2rem;
+  margin: 1.8rem 0;
+  padding: 1.5rem;
+  background: rgba(247, 254, 231, 0.2);
+  border-radius: 15px;
+  border: 1px solid rgba(72, 187, 120, 0.2);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Fuente principal */
 }
 
 .checkbox-group input {
-  margin-top: 0.4rem;
-  accent-color: #ff6b6b;
+  margin-top: 0.6rem;
+  accent-color: #48bb78;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
 }
 
 .checkbox-group label {
-  font-weight: normal;
-  color: #555;
-  font-size: 0.98rem;
-  line-height: 1.5;
+  font-weight: 500;
+  color: #4a5568;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  flex: 1;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Fuente principal */
 }
 
 .checkbox-group a {
-  color: #ff6b6b;
+  color: #48bb78;
   text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Fuente principal */
 }
 
+.checkbox-group a:hover {
+  color: #4299e1;
+  text-decoration: underline;
+}
+
+/* Mantiene la fuente principal para el botón submit */
 .submit-btn {
   width: 100%;
-  padding: 1.1rem;
-  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+  padding: 1.4rem;
+  background: linear-gradient(135deg, #48bb78, #4299e1);
   color: white;
   border: none;
-  border-radius: 10px;
-  font-size: 1.15rem;
+  border-radius: 15px;
+  font-size: 1.2rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(72, 187, 120, 0.4);
+  letter-spacing: 0.5px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Fuente principal */
 }
 
 .submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(72, 187, 120, 0.5);
+  background: linear-gradient(135deg, #4299e1, #48bb78);
 }
 
-/* === Footer === */
+/* === Footer premium === */
 footer {
   text-align: center;
-  padding: 2.2rem;
-  background: #fdf9f5;
-  color: #777;
-  font-size: 1rem;
-  border-top: 1px solid #f0e9e2;
+  padding: 3rem;
+  background: linear-gradient(135deg, #2d3748, #4a5568);
+  color: #e2e8f0;
+  font-size: 1.1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* === Responsive === */
+footer p {
+  opacity: 0.8;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; /* Fuente principal */
+}
+
+/* === Responsive refinado === */
+@media (max-width: 1024px) {
+  .carousel-track {
+    height: 500px;
+  }
+  
+  .carousel-card {
+    min-width: calc(100% / 2);
+  }
+}
+
+.content-card {
+  max-width: 2400px;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.content-card > *:not(#loader) {
+  margin: 0;
+  border-radius: 0;
+}
+
+.content-card .hero {
+  border-radius: 24px 24px 0 0;
+  margin-bottom: 0;
+}
+
+.content-card footer {
+  border-radius: 0 0 24px 24px;
+  margin-top: 0;
+}
+
+.card-content-wrapper {
+  padding: 0 1.5rem;
+}
+
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 2.9rem;
+    font-size: 3.2rem;
   }
 
   .hero h2 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
+  
   .nav-links {
-    gap: 1.3rem;
+    gap: 1.5rem;
   }
 
   .cards {
-    padding: 2.5rem 5%;
+    padding: 3rem 5%;
     grid-template-columns: 1fr;
   }
 
   .hero-logo {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+  }
+  
+  .carousel-container {
+    padding: 0 1.5rem;
+  }
+  
+  .carousel-wrapper {
+    padding: 2rem 2rem;
+  }
+  
+  .carousel-track {
+    height: 400px;
+  }
+  
+  .carousel-card {
+    min-width: 100%;
+  }
+  
+  .form-container {
+    padding: 2.5rem 1.5rem;
   }
 }
 
-/* Cargar fuentes adicionales */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+  
+  .social-icons {
+    gap: 1rem;
+  }
+  
+  .social-icons a {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* Cargar fuentes premium - Eliminamos Playfair Display ya que no se usa */
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&display=swap'); */
+/* Añadimos Inter y Sacramento */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sacramento&display=swap');
